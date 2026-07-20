@@ -24,5 +24,11 @@ RUN apk add --no-cache \
     && docker-php-ext-enable xdebug \
     && apk del --no-cache .build-deps
 
+# Install Node.js and npm    
+RUN apk --no-cache add nodejs npm
+
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+
 # Устанавливаем рабочую директорию, куда примонтирован Laravel
 WORKDIR /var/www/html
