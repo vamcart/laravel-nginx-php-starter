@@ -1,39 +1,39 @@
-# Стартовый набор для laravel приложения
+# Laravel Starter Pack - Nginx, PHP 8.5, xDebug
 
-Nginx + PHP 8.5 + xDebug
+Simple to use Laravel Starter Pack.
 
-## Установка nginx, php в docker окружении:
+## Start nginx, php with Docker Compose:
 
-* Выгружаем репозиторий:
+* Download repo:
 ``
 git clone git@github.com:vamcart/laravel-nginx-php-starter.git
 ``
-* Переходим в папку:
+* Go to files:
 ``
 cd laravel-nginx-php-starter
 ``
-* Копируем .env файл
+* Copy .env
 ``
 cp .env.dist .env
 ``
-* Запускаем веб-сервер, php в докер окружении
+* Start nginx, php with docker compose
 ``
 docker compose up -d
 ``
-* Открываем в браузере http://localhost:8084 . Должна открыться 404 страница nginx.
+* Try to open http://localhost:8084 . You muse ses 404 nginx page. It's fine.
 
-## Установка laravel
+## Laravel install
 
-* Подключаемся в контейнер:
+* Connect to container:
 ``
 sudo docker exec -it laravel-app-php /bin/sh
 ``
-* Устанавливаем laravel
+* Install laravel
 ``
 composer create-project laravel/laravel ./
 ``
-* Устанавливаем права доступа на папки
+* Set permissions
 ``
 chmod -R 777 public storage database
 ``
-* Всё, laravel проект готов, открываем в браузере http://localhost:8084 , должна появиться приветственная страница Laravel.
+* Ths't all, your laravel copy ready to develop. Open http://localhost:8084 , you must see Laravel welcome page.
