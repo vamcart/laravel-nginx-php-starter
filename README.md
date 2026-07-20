@@ -36,4 +36,4 @@ composer create-project laravel/laravel ./
 ``
 chmod -R 777 storage database
 ``
-* Всё, laravel проект готов, открываем в браузере http://localhost:8084,должна появиться приветственная страница Laravel.
+* Всё, laravel проект готов, открываем в браузере http://localhost:8084 ,должна появиться приветственная страница Laravel.
