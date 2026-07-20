@@ -20,7 +20,7 @@ cp .env.dist .env
 ``
 docker compose up -d
 ``
-* Try to open http://localhost:8084 . You muse ses 404 nginx page. It's fine.
+* Try to open http://localhost:8084 . You must see 404 nginx page. It's fine.
 
 ## Laravel install
 
