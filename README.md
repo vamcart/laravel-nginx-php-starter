@@ -37,3 +37,10 @@ composer create-project laravel/laravel ./
 chmod -R 777 public storage database
 ``
 * Ths't all, your laravel copy ready to develop. Open http://localhost:8084 , you must see Laravel welcome page.
+
+XHProf + Buggregator
+``
+composer require --dev maantje/xhprof-buggregator-laravel
+``
+
+Buggregator Web UI: http://localhost:8000

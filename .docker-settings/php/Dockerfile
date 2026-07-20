@@ -40,5 +40,14 @@ RUN pecl install xdebug && \
     docker-php-ext-enable xdebug && \
     mkdir /var/log/xdebug
 
+# xhprof    
+RUN pecl install xhprof && \
+    docker-php-ext-enable \  
+    xhprof 
+
+# Устанавливаем расширение opentelemetry для PHP
+RUN pecl install opentelemetry \
+    && docker-php-ext-enable opentelemetry
+
 # Устанавливаем рабочую директорию, куда примонтирован Laravel
 WORKDIR /var/www/html
