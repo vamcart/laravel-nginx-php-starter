@@ -1,0 +1,26 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: "${COMPOSE_PROJECT_NAME}-nginx"
+    ports:
+      - "${HOST_PORT}:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./.docker-settings/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+
+  php:
+    build:
+      context: .
+      dockerfile: ./.docker-settings/php/Dockerfile
+    container_name: "${COMPOSE_PROJECT_NAME}-php"
+    volumes:
+      - ./src:/var/www/html
+      - ./.docker-settings/php/limits.ini:/usr/local/etc/php/conf.d/limits.ini
+      - ./.docker-settings/php/xdebug.ini:/usr/local/etc/php/conf.d/99-xdebug.ini
+    environment:
+      XDEBUG_MODE: debug
+      XDEBUG_CONFIG: "client_host=host.docker.internal client_port=9003 start_with_request=yes"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
