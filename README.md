@@ -9,6 +9,8 @@ What included:
 * PHP
 * xDebug + VS Code integration
 * XHProf + Buggregator Profiler
+* mySQL
+* phpMyAdmin
 
 ## Start nginx, php with Docker Compose:
 
@@ -78,6 +80,20 @@ All requests to laravel app http://localhost:8084 will be available in Buggregat
 ```php
 composer remove maantje/xhprof-buggregator-laravel
 ```
+## mySQL
+
+host: database
+port: 3320
+database: docker
+user: docker
+password: docker
+
+## phpMyAdmin
+
+http://localhost:8085
+
+login: docker
+password: docker
 
 ## Bugs
 
