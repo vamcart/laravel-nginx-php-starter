@@ -27,7 +27,7 @@ cd laravel-nginx-php-starter
 ```
 cp .env.dist .env
 ```
-* Start nginx, php with docker compose
+* Start with Docker Compose
 ```
 docker compose up -d
 ```
