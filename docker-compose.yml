@@ -35,3 +35,7 @@ services:
       - "8025:1025" # SMTP Server (Mailcatcher)
       - "9912:9912" # Symfony VarDumper Server
       - "9913:9913" # Monolog Socket    
+    environment:
+      # Increase maximal memory allocations for processing large JSON requests
+      - MAX_REQUEST_SIZE=104857600 # 100MB in bytes
+      - HTTP_MAX_REQUEST_SIZE=104857600      
