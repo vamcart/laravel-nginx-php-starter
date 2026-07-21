@@ -11,6 +11,7 @@ What included:
 * XHProf + Buggregator Profiler
 * mySQL
 * phpMyAdmin
+* Redis
 
 ## Start nginx, php with Docker Compose:
 
@@ -114,6 +115,16 @@ docker
 Password: 
 ```
 docker
+```
+## Redis
+
+Host: 
+```
+redis
+```
+Port: 
+```
+6379
 ```
 
 ## Bugs
