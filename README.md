@@ -82,18 +82,39 @@ composer remove maantje/xhprof-buggregator-laravel
 ```
 ## mySQL
 
-host: database
-port: 3320
-database: docker
-user: docker
-password: docker
+Host: 
+```
+database
+```
+Port: 
+```
+3306
+```
+Database: 
+```
+docker
+```
+User: 
+```
+docker
+```
+Password: 
+```
+docker
+```
 
 ## phpMyAdmin
 
 http://localhost:8085
 
-login: docker
-password: docker
+Login:
+```
+docker
+```
+Password: 
+```
+docker
+```
 
 ## Bugs
 
