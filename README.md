@@ -8,7 +8,7 @@ What included:
 * Nginx
 * PHP
 * xDebug + VS Code integration
-* XHPRof + Buggregator Profiler
+* XHProf + Buggregator Profiler
 
 ## Start nginx, php with Docker Compose:
 
