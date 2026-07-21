@@ -42,5 +42,41 @@ XHProf + Buggregator
 ``
 composer require --dev maantje/xhprof-buggregator-laravel
 ``
-
 Buggregator Web UI: http://localhost:8000
+
+All requests to laravel app http://localhost:8084 will be available in Buggregator Profile tab.
+
+## Bugs
+
+If Profiler tab in Buggregator is empty, and laravel log at /storage/logs/ has - 400 bad request error.
+
+You need to fix spiral profiler file.
+
+/src/vendor/spiral-packages/profiler/src/storage/WebStorage.php
+
+Change:
+``
+    public function store(string $appName, array $tags, \DateTimeInterface $date, array $data): void
+    {
+        $this->options['json'] = [
+            'profile' => $this->converter->convert($data),
+            'tags' => $tags,
+            'app_name' => $appName,
+            'hostname' => \gethostname(),
+            'date' => $date->getTimestamp(),
+        ];
+``        
+to:
+``
+    public function store(string $appName, array $tags, \DateTimeInterface $date, array $data): void
+    {
+        $this->options['json'] = [
+            'profile' => $this->converter->convert($data),
+            //'tags' => $tags,
+            'app_name' => $appName,
+            'hostname' => \gethostname(),
+            'date' => $date->getTimestamp(),
+        ];
+``
+
+After that Profiler tab is working fine at Buggregator.
