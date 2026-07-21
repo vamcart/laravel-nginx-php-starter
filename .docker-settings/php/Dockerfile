@@ -49,5 +49,9 @@ RUN pecl install xhprof && \
 RUN pecl install opentelemetry \
     && docker-php-ext-enable opentelemetry
 
+# Устанавливаем расширение redis для PHP
+RUN pecl install redis && \
+    docker-php-ext-enable redis
+        
 # Устанавливаем рабочую директорию, куда примонтирован Laravel
 WORKDIR /var/www/html
