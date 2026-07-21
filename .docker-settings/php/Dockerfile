@@ -45,7 +45,7 @@ RUN pecl install xhprof && \
     docker-php-ext-enable \  
     xhprof 
 
-#RUN mkdir -p /tmp/xhprof && chmod 777 /tmp/xhprof
+RUN mkdir -p /tmp/xhprof && chmod 777 /tmp/xhprof
 
 #RUN echo "xhprof.output_dir='/tmp/xhprof'" >> /usr/local/etc/php/conf.d/docker-php-ext-xhprof.ini
     
