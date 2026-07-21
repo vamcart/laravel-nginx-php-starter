@@ -13,7 +13,7 @@ What included:
 * phpMyAdmin
 * Redis
 
-## Start nginx, php with Docker Compose:
+## Install:
 
 * Download repo:
 ```
