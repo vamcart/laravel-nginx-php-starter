@@ -30,7 +30,7 @@ cp .env.dist .env
 ```
 docker compose up -d
 ```
-* Try to open http://localhost:8084 . You must see 404 nginx page. It's fine.
+* Try to open http://localhost:8084 . You must see 404 nginx page. It's fine, because we don't have any php files yet.
 
 ## Laravel install
 
@@ -46,7 +46,7 @@ composer create-project laravel/laravel ./
 ```
 chmod -R 777 public storage database
 ```
-* Ths't all, your laravel copy ready to develop. Open http://localhost:8084 , you must see Laravel welcome page.
+* That's all, your laravel copy ready to develop. Open http://localhost:8084 , you must see Laravel welcome page.
 
 ## XDebug + VS Code
 
